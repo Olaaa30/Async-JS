@@ -13,34 +13,34 @@
             { title: 'Post Two', body: 'This is post two'}
     ];
 
-    // function getPost(){
-    //     setTimeout(() =>{
-    //         let outPut = '';
-    //         posts.forEach((post, index) =>{
-    //             outPut += `<li>${post.body}</li>`;
-    //         });
-    //         document.body.innerHTML = outPut;
-    //     }, 1000);
-    // };
+    function getPost(){
+        setTimeout(() =>{
+            let outPut = '';
+            posts.forEach((post, index) =>{
+                outPut += `<li>${post.body}</li>`;
+            });
+            document.body.innerHTML = outPut;
+        }, 1000);
+    };
 
-    // function createPost(post, callback){
-    //     setTimeout(() => {
-    //         posts.push(post);
-    //         callback();
-    //     }, 2000);
-    // };
+    function createPost(post, callback){
+        setTimeout(() => {
+            posts.push(post);
+            callback();
+        }, 2000);
+    };
     // createPost({ title: 'Post 3', body: "This is post 3"}, getPost)
 
     
-    // let myFunc = () => {
-    //     setTimeout(() =>{
-    //     console.log(" I ");
-    //     console.log(" eat ");
-    //     console.log(" ice cream ");
-    //     console.log(" with a ");
-    //     console.log(" spoon ");
-    //     }, 3000)
-    // };
+    let myFunc = () => {
+        setTimeout(() =>{
+        console.log(" I ");
+        console.log(" eat ");
+        console.log(" ice cream ");
+        console.log(" with a ");
+        console.log(" spoon ");
+        }, 3000)
+    };
     // myFunc();
 
     let stocks = {
@@ -94,124 +94,126 @@
         }
     };
     kitchen();
-    // let toppings_choice = () => {
-    //     return new Promise ((resolve, reject) => {
-    //         setTimeout(() => {
-    //             resolve(
-    //                 console.log("which toppings would you love? ")
-    //             )
-    //         }, 3000);
-    //     })  
-    // };
-    // async function kitchen() {
-    //     console.log("A")
-    //     await toppings_choice()
-    //     setTimeout(() => {
-    //         console.log("B")
-    //     }, 2000); 
+    let toppings_choice = () => {
+        return new Promise ((resolve, reject) => {
+            setTimeout(() => {
+                resolve(
+                    console.log("which toppings would you love? ")
+                )
+            }, 3000);
+        })  
+    };
+    async function kitchen() {
+        console.log("A")
+        await toppings_choice()
+        setTimeout(() => {
+            console.log("B")
+        }, 2000); 
         
-    // }
+    }
 
-    // kitchen();
-    // console.log("doing the dishes");
-    // console.log("clearning the tables");
+    kitchen();
+    console.log("doing the dishes");
+    console.log("clearning the tables");
 
-    // let order = () => {
-    //     return new Promise((resolve, reject) => {
-    //         if (){
-    //             resolve()
-    //         }else {
-    //             reject()
-    //         }
-    //     })
-    // };
+    let order = () => {
+        return new Promise((resolve, reject) => {
+            if (is_shop_open){
+                resolve()
+            }else {
+                reject()
+            }
+        })
+    };
 
-    // async function order(){
-    //     try{
-    //         await abc
-    //     }
-    //     catch(error){
-    //         console.log("abc doesn't exist", error)
-    //     }
-    //     finally{
-    //         console.log("runs anyways");
-    //     }
-    // };
-    // order().then(() => {
-    //     console.log("welcome to the city of nonsense")
-    // })
-    // let order = (time, work) => {
-    //     return new Promise((resolve, reject) => {
-    //         if (is_shop_open) {
-    //             setTimeout (() => {
-    //                 resolve(work);
-    //             }, time);
-    //         }else{
-    //             reject(console.log("shop is closed"));
-    //         }
-    //     });
-    // };
+    async function order(){
+        try{
+            await abc
+        }
+        catch(error){
+            console.log("abc doesn't exist", error)
+        }
+        finally{
+            console.log("runs anyways");
+        }
+    };
+    order().then(() => {
+        console.log("welcome to the city of nonsense")
+    })
+    let order = (time, work) => {
+        return new Promise((resolve, reject) => {
+            if (is_shop_open) {
+                setTimeout (() => {
+                    resolve(work);
+                }, time);
+            }else{
+                reject(console.log("shop is closed"));
+            }
+        });
+    };
 
 
 
-    // let selectFruit = ()=>console.log(`${stocks.Fruits[0]} was selected`);
-    // let startProduction = ()=>console.log("production has started");
-    // let cutFruit = ()=> console.log("fruit was chopped");
-    // let addWaterAndIce = () => console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} have been added`);
-    // let startMachine = () => console.log("machine was started");
-    // let selectHolder = () => console.log(`iced cream has been placed inside ${stocks.holder[1]}`)
-    // let addTopping = () => console.log(`${stocks.toppings[1]} have been added as toppings`)
-    // order(2000, selectFruit())
-    // .then(()=> {
-    //     return order(1000, startProduction())
-    // }).then(() => {
-    //     return order(2000, cutFruit())
-    // }).then(() => {
-    //     return order(1000, addWaterAndIce())
-    // }).then(() => {
-    //     return order(2000, startMachine())
-    // }).then(() => {
-    //     return order(3000, selectHolder())
-    // }).then(() => {
-    //     return order(1000, addTopping())
-    // }).then(() => {
-    //     return console.log("iced cream has been served")
-    // }).catch(() => {
-    //     console.log("customer left")
-    // }).finally(() => {
-    //     console.log("day ended our shop is closed")
-    // })
+    let selectFruit = ()=>console.log(`${stocks.Fruits[0]} was selected`);
+    let startProduction = ()=>console.log("production has started");
+    let cutFruit = ()=> console.log("fruit was chopped");
+    let addWaterAndIce = () => console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} have been added`);
+    let startMachine = () => console.log("machine was started");
+    let selectHolder = () => console.log(`iced cream has been placed inside ${stocks.holder[1]}`)
+    let addTopping = () => console.log(`${stocks.toppings[1]} have been added as toppings`)
+    order(2000, selectFruit())
+    .then(()=> {
+        return order(1000, startProduction())
+    }).then(() => {
+        return order(2000, cutFruit())
+    }).then(() => {
+        return order(1000, addWaterAndIce())
+    }).then(() => {
+        return order(2000, startMachine())
+    }).then(() => {
+        return order(3000, selectHolder())
+    }).then(() => {
+        return order(1000, addTopping())
+    }).then(() => {
+        return console.log("iced cream has been served")
+    }).catch(() => {
+        console.log("customer left")
+    }).finally(() => {
+        console.log("day ended our shop is closed")
+    })
     
-    // console.log(stocks.Fruits[Math.floor(Math.random() * stocks.Fruits.length)]);
-    // let order = (fruit_name, call_production) =>{
-    //     setTimeout(() =>{
-    //         console.log(`${stocks.Fruits[fruit_name]} was selected`)
-    //         call_production();
-    //     }, 2000)
-    // };
-    // let production = () => {
-    //     setTimeout(() => {
-    //         console.log("production has started");
-    //         setTimeout(() =>{
-    //             console.log("the fruit has been chopped")
-    //             setTimeout(() => {
-    //                 console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} were added`)
-    //                 setTimeout(() => {
-    //                     console.log("The machine has been started")
-    //                     setTimeout(() => {
-    //                         console.log(`iced cream has been placed in a${stocks.holder[0]}`)
-    //                         setTimeout(() => {
-    //                             console.log(`${stocks.toppings[0]} was added as topping`)
-    //                             setTimeout(() => {
-    //                                 console.log("serving iced cream");
-    //                             }, 1000);
-    //                         }, 3000)
-    //                     }, 2000);
-    //                 }, 1000);
-    //             }, 1000);
-    //         }, 2000);
-    //     }, 1000);
-    // };
+    console.log(stocks.Fruits[Math.floor(Math.random() * stocks.Fruits.length)]);
+    let order = (fruit_name, call_production) =>{
+        setTimeout(() =>{
+            console.log(`${stocks.Fruits[fruit_name]} was selected`)
+            call_production();
+        }, 2000)
+    };
+
+    /*<---------------------INFAMOUS CALLBACK HELL-------------------------->*/
+    let production = () => {
+        setTimeout(() => {
+            console.log("production has started");
+            setTimeout(() =>{
+                console.log("the fruit has been chopped")
+                setTimeout(() => {
+                    console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} were added`)
+                    setTimeout(() => {
+                        console.log("The machine has been started")
+                        setTimeout(() => {
+                            console.log(`iced cream has been placed in a${stocks.holder[0]}`)
+                            setTimeout(() => {
+                                console.log(`${stocks.toppings[0]} was added as topping`)
+                                setTimeout(() => {
+                                    console.log("serving iced cream");
+                                }, 1000);
+                            }, 3000)
+                        }, 2000);
+                    }, 1000);
+                }, 1000);
+            }, 2000);
+        }, 1000);
+    };
     // order(0,production);
 
     </script>
