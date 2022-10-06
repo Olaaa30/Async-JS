@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // types of data types in js
+        //Primitives                Reference types
+        //string
+        //numbers
+        //boolean
+        //Null
+        //undefined
+        var customerName = "Olayinka";
+        var accountBalance = 343431;
+        var isValid = true;
+        var object = null;
+        var x = undefined;
+        var y = 123;
+        var s = "123";
+        var string1 = "You write your own destiny";
+        document.write(typeof(customerName)+"<br/>")
+        document.write(accountBalance+"<br/>")
+        document.write(isValid+"<br/>")
+        document.write(typeof(object)+"<br/>") // returns object instead of null type
+        document.write((object===null)+"<br/>") // returns object instead of null type
+        document.write(x+"<br/>")
+        document.write((y==s)+"<br/>")//returns cause it converts the string data type to an int
+        document.write((y===s)+"<br/>")// return false...it compares them literally as they are
+        document.write(string1.toLocaleLowerCase()+"<br/>")
+        document.write(string1.substring(2, 33)+"<br/>")
+        document.write(typeof y.toString()+"<br/>")
+    </script>
+</body>
+</html>

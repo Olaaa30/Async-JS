@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var course1 = {
+            name: "Javascipt Fundamentals"//put
+        };
+        course1.name = "End to End java project";//set
+        course1.description = "master java project development";
+        course1.views = 3434315//put
+        console.log("views" in course1)
+        console.log("description" in course1);
+        console.log("toString" in course1);
+        console.log(course1.hasOwnProperty("toString"));
+        for(var eachProperty in course1){
+            console.log(eachProperty);
+            console.log(course1[eachProperty])
+        };
+
+    </script>
+</body>
+</html>

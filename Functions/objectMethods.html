@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function displayDetails(){
+                document.write(this.id+"</br>");
+                document.write(this.name+"</br>");
+            };
+        var student1 = {
+            "name": "olayinka",
+            "id": 1,
+        };
+        var student2 = {
+            "name": "jojo",
+            "id": 2,
+        };
+        this.id = 3;
+        this.name = "olasama";
+        // displayDetails.call(student1);
+        // displayDetails.call(student2);
+        // displayDetails.call()
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        posts =[];
+        function getPost(){
+        setTimeout(() =>{
+            let outPut = '';
+            posts.forEach((post, index) =>{
+                outPut += `<li>${post.body}</li>`;
+            });
+            document.body.innerHTML = outPut;
+        }, 1000);
+    };
+
+    function createPost(post, callback){
+        return new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                posts.push(post);
+                const error = false;
+                if (!error){
+                    resolve();
+                }else{
+                    reject('Error: something went wrong')}
+        }, 2000);
+        });
+        
+    };
+    // createPost({ title: "Post 4", body: "This is the fourth post"})
+    // .then(getPost)
+    // .catch(err => console.log(err))
+    //Promises.all
+
+    // Async Await
+    async function init(){
+        await createPost({ title: "Post 4", body: "This is the fourth post"});
+        getPost();
+    }
+    init();
+
+    //Async await with fetch
+    async function fetchUsers(){
+        var response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await response.json();
+        console.log(data);
+    };
+    fetchUsers();
+    // const promise1 = Promise.resolve('Hello world');
+    // const promise2 = 13;
+    // const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
+    // const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Goodbye'));
+    // Promise.all([promise1, promise2, promise4, promise3]).then(values => console.log(values));
+    </script>
+</body>
+</html>

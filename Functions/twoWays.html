@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function evenOrOdd(number){
+            document.write(arguments[1]+"</br>");
+            document.write(arguments.length+"</br>")
+            document.write(evenOrOdd.length+"</br>")
+            if(number%2==0)
+                return "even";
+            else{
+                return "odd";
+            }
+        } 
+        var evenorOdd = (number) => {
+            if (number%2==0)
+                return "even";
+            else{
+                return "false";
+            }
+        }
+    document.write(evenOrOdd(10,12,76,89));
+    document.write(evenorOdd(10));
+    </script>
+</body>
+</html>
