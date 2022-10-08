@@ -6,4 +6,5 @@ const sumNums = (a: EvenNumber, b: number) => {
     return (a + b);
 };
 
-sumNums(2, 6);
+let res = sumNums(2, 6);
+console.log(res)
