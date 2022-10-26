@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Flight(airlines, flightNumber){
+            this.airlines = airlines;
+            this.flightNumber = flightNumber;
+            this.display =() => {
+                console.log(this.airlines);
+                console.log(this.flightNumber);
+            };
+        };
+        var flight1 = new Flight("American Lines", "ERET234");
+        var flight2 = new Flight("South West", "ERLERO234");
+        console.log(flight1 instanceof Flight);//should return true
+        console.log(flight2 instanceof Flight);//should also return true
+        console.log(flight1.constructor === Flight);//should also return true
+        console.log(flight2.constructor === Flight);//SHOULD ALSO RETURN TRUE
+        flight1.display();
+        flight2.display();
+
+        function Laptop(manufacturer, memory, capacity){
+            this.manufacturer = manufacturer;
+            this.capacity = capacity;
+            this.memory = memory;
+
+            this.display = () =>{
+                console.log(this.manufacturer);
+                console.log(this.capacity);
+                console.log(this.memory);
+            };
+        };
+
+        const laptop1 = new Laptop("HP", "8 gigs", "512 SSD");
+        const laptop2 = new Laptop("Apple", "16 gigs", "256 SSD");
+        
+        laptop1.display();
+        laptop2.display();
+    </script>
+</body>
+</html>

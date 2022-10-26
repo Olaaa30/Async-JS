@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var product = {
+        name: "iphone"
+    }
+    //objects are extensible by default
+    console.log(Object.isExtensible(product)); //true
+    console.log(Object.isSealed(product)); //false
+    console.log(Object.freeze(product));//should return false
+    Object.seal(product);//does the same thing as the func below except that the old properties now become immutable
+    Object.preventExtensions(product);//prevents the adding of new properties
+    console.log(Object.isExtensible(product));//false
+    var description = Object.getOwnPropertyDescriptor(product);
+    console.log(description.configurable);//false
+    </script>
+</body>
+</html>
